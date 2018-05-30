@@ -1,7 +1,14 @@
-require_relative 'lib/faraday/restrict_ip_addresses/version'
+lib = File.expand_path("../lib", __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require 'faraday'
+require 'faraday_middleware'
+require 'faraday/restrict_ip_addresses/version'
+require 'ipaddr'
 
 Gem::Specification.new do |spec|
-  spec.add_dependency 'faraday', '~>0.9.0'
+  spec.add_dependency 'faraday', ['>=0.9.0', '<1.0.0']
+  spec.add_dependency "faraday_middleware"
   spec.add_development_dependency 'bundler', '~> 1.0'
   spec.authors = ["Ben Lavender"]
   spec.description = %q{Restrict the IP addresses Faraday will connect to}

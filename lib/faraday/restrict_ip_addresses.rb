@@ -1,6 +1,3 @@
-require 'faraday/restrict_ip_addresses/version'
-require 'ipaddr'
-
 module Faraday
   class RestrictIPAddresses < Faraday::Middleware
     class AddressNotAllowed < Faraday::Error::ClientError ; end
