@@ -1,7 +1,7 @@
 require_relative 'lib/faraday/restrict_ip_addresses/version'
 
 Gem::Specification.new do |spec|
-  spec.add_dependency 'faraday', ['>=0.9.0', '<1.0.0']
+  spec.add_dependency 'faraday', ['>=0.9.0']
   spec.add_dependency "faraday_middleware"
   spec.add_development_dependency 'bundler', '~> 1.0'
   spec.authors = ["Ben Lavender"]
